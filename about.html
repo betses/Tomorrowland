@@ -13,20 +13,31 @@
 <body>
   <header>
     <nav class="nav">
-        <div class="mob-nav">
-          <img src="images/menu-icon2.png" alt="menu option">
+      <div class="mob-nav">
+        <img src="images/menu-icon2.png" id="open-menu" onclick="display()" alt="menu option">
+        <img src="images/close.png" id="close-menu" onclick="display()" alt="Close Icon">
+      </div>
+      <div class="mob-nav-container" id="menu">
+        <ul class="mob-nav-ul">
+          <li>
+            <a href="index.html" onclick="display()">Home</a>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Join</a></li>
+        </ul>
+      </div>
+      <div class="top-nav">
+        <div class="logo">
+          <a href="index.html"><img src="/images/tomorrowland.png" alt="Logo"></a>
         </div>
-        <div class="top-nav">
-          <div class="logo">
-            <img src="/images/tomorrowland.png" alt="Logo">
-          </div>
-          <ul class="main-nav">
-            <li><a href="#portfolio">About</a></li>
-            <li><a href="#about-me">Program</a></li>
-            <li><a href="#contact-me">Contact</a></li>
-          </ul>
-        </div>
-    </nav>
+        <ul class="main-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="#about-me">Program</a></li>
+          <li><a href="#contact-me">Join</a></li>
+        </ul>
+      </div>
+  </nav>
   </header>
   <main>
     <section class="about-title-section">
@@ -106,6 +117,6 @@
         <p>2022 Creative Common Korea Some Rights Reserved</p>
     </div>
   </footer>
-
+  <script src="main.js"></script>
 </body>
 </html>

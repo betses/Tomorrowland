@@ -34,7 +34,7 @@
   }
 
   .mob-nav-container {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     padding-top: 10%;
     display: none;
@@ -68,6 +68,7 @@
     width: 375px;
     margin: auto;
     padding-left: 10px;
+    background-image: url(../images/mobile-bg.png);
     background-color: #f7f7f7;
   }
 
@@ -163,7 +164,6 @@
   .underline {
     width: 15%;
     text-align: left;
-    margin-left: 40%;
     height: 1px;
     background-color: #ec5242;
     margin-bottom: 30px;
@@ -208,6 +208,15 @@
     padding-top: 50px;
     margin-bottom: 10px;
     color: #d3d3d3;
+  }
+
+  .featured-head-speaker h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 10px;
   }
 
   .speaker-image {
@@ -308,6 +317,15 @@
 
   /* ------------- about css start here ----------------- */
 
+  .about-featured-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    padding: 50px 0;
+  }
+  .about-featured-head h2 {
+    text-align: center;
+  }
   .about-title-section {
     display: flex;
     flex-direction: column;

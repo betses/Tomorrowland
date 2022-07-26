@@ -114,8 +114,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// eslint-disable-next-line func-names
-document.onreadystatechange = function () {
+document.onreadystatechange = () => {
   if (document.readyState === 'interactive') {
     isMobile = document.body.clientWidth < mobileBreakpoint;
     renderPage();

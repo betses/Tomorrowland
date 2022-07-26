@@ -13,34 +13,45 @@
 <body>
   <header>
     <nav class="nav">
-        <div class="mob-nav">
-          <img src="images/menu-icon2.png" id="open-menu" onclick="display()" alt="menu option">
-          <img src="images/close.png" id="close-menu" onclick="display()" alt="Close Icon">
-        </div>
-        <div class="mob-nav-container" id="menu">
-          <ul class="mob-nav-ul">
-            <li>
-              <a href="index.html" onclick="display()">Home</a>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Join</a></li>
+        <div class="social-nav">
+          <ul class="main-nav">
+            <li><a href="#"><img  class="social" src="/images/twitter.png" alt="Logo"></a></li>
+            <li><a href="#"><img class="social" src="/images/facebook.png" alt="Logo"></a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Mypage</a></li>
+            <li><a href="#">Korean</a></li>
           </ul>
         </div>
         <div class="top-nav">
           <div class="logo">
             <a href="index.html"><img src="/images/tomorrowland.png" alt="Logo"></a>
           </div>
-          <ul class="main-nav">
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Join</a></li>
-          </ul>
+          <div class="main-list-wrapper">
+            <ul class="main-nav">
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Program</a></li>
+              <li><a href="#">Join</a></li>
+            </ul>
+        </div>
         </div>
     </nav>
   </header>
   <main>
     <section class="title-section">
+      <div class="mob-nav">
+        <img src="images/menu-icon2.png" id="open-menu" onclick="display()" alt="menu option">
+        <img src="images/close.png" id="close-menu" onclick="display()" alt="Close Icon">
+      </div>
+      <div class="mob-nav-container" id="menu">
+        <ul class="mob-nav-ul">
+          <li>
+            <a href="index.html" onclick="display()">Home</a>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Join</a></li>
+        </ul>
+      </div>
       <div class="title-section-wrapper">
         <div class="landing-text">
           <h4>"Live Today, Love Tomorrow, Until Forever"</h4>

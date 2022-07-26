@@ -12,6 +12,10 @@
     margin: auto;
   }
 
+  .social-nav {
+    display: none;
+  }
+
   .top-nav {
     display: none;
   }
@@ -19,7 +23,6 @@
   .mob-nav {
     width: 375px;
     margin: auto;
-    background-color: #f7f7f7;
   }
 
   nav a {
@@ -40,19 +43,10 @@
     width: 100%;
     padding-top: 10%;
     display: none;
-    background-color: #f7f7f7;
   }
 
   #close-menu {
     display: none;
-  }
-
-  .mob-nav-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 22px;
-    margin-left: 20px;
   }
 
   .mob-nav a {
@@ -62,6 +56,21 @@
     font-size: 32px;
     line-height: 44px;
     color: #3a4a42;
+  }
+
+  .mob-nav-ul li a {
+    color: #172b4d;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .mob-nav-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    margin-left: 20px;
   }
 
   .title-section {
@@ -347,7 +356,8 @@
     flex-direction: column;
     width: 375px;
     margin: auto;
-    padding: 0 10px;
+    padding-left: 10px;
+    background-image: url(../images/mobile-bg.png);
     background-color: #f7f7f7;
   }
 

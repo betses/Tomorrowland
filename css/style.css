@@ -71,7 +71,7 @@
     color: #ec5242;
     font-style: normal;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 20px;
     margin: 0;
   }
 
@@ -219,16 +219,7 @@
 
   .speaker-img {
     width: 90px;
-    position: relative;
-    left: -46px;
-    top: 5px;
-  }
-
-  .empity-img {
-    width: 60px;
-    position: relative;
-    left: 0;
-    top: -37px;
+    margin: 0 13px;
   }
 
   .speaker-container {
@@ -250,7 +241,7 @@
 
   .speaker-disc p {
     font-style: normal;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 15px;
     color: #ec5242;
     margin-bottom: 10px;
@@ -258,7 +249,7 @@
 
   .discription p {
     font-style: normal;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 15px;
     margin-bottom: 10px;
   }
@@ -398,7 +389,7 @@
   }
 
   .logo-img img {
-    width: 35%;
+    width: 20%;
   }
 
   .logo-disc h2 {
@@ -412,7 +403,16 @@
   }
 
   /* ------------------------ Revise --------------------------- */
-  .past-image {
+  .past-image1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/past1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 360px;
+  }
+  .past-image2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -503,6 +503,7 @@
 
   .footer-wrappter img {
     margin: 0;
+    width: 116px;
   }
 
   .about-underline-partner {

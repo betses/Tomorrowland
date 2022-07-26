@@ -16,109 +16,116 @@ function display() {
 }
 const featureRoster = [
   {
+    id: 0,
+    name: 'Robert Falcon',
+    image: 'images/dj.jpeg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
+  },
+  {
     id: 1,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
+    name: 'Dave Lambert',
+    image: 'images/dj2.jpeg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
   },
   {
     id: 2,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
+    name: 'Meaghan',
+    image: 'images/dj3.jpeg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
   },
   {
     id: 3,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
+    name: 'Odessy',
+    image: 'images/dj4.jpeg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
   },
   {
     id: 4,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
+    name: 'Dalafino',
+    image: 'images/dj5.jpeg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
   },
   {
     id: 5,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
-  },
-  {
-    id: 6,
-    name: 'yotoro tototot',
-    image: '',
-    location: '',
-    description: '',
+    name: 'Prinz',
+    image: 'images/dj6.jpg',
+    location: 'DJ, producer and musician',
+    description: 'Electronic Dance Music, or EDM music definition, is any music produced electronically using digital and analog equipment and is meant to be danced to.',
   },
 ];
 
-function isSmallScreen() {
-  return window.matchMedia('(max-width: 768px)').matches;
-}
+let isMobile = false;
+let show = 3;
 
-const roster = document.getElementById('speaker-wrapper');
-const speaker = document.createElement('div');
-speaker.className = 'speaker-wrapper';
-let speakerContainer = '';
+const mobileBreakpoint = 768;
 
-if (isSmallScreen() === false) {
-  speakerContainer = '';
-  for (let i = 0; i < featureRoster.length; i += 1) {
+const removeAllChildren = (wrapper) => {
+  let child = wrapper.lastElementChild;
+  while (child) {
+    wrapper.removeChild(child);
+    child = wrapper.lastElementChild;
+  }
+};
+
+const renderPage = () => {
+  const wrapper = document.querySelector('#speaker-wrapper');
+
+  removeAllChildren(wrapper);
+
+  let speakerContainer = '';
+
+  for (let i = 0; i < (isMobile ? show : featureRoster.length); i += 1) {
+    const el = document.createElement('div');
+    el.className = 'speaker-wrapper1';
     speakerContainer = `
     <div class="speaker-container">
     <div class="speaker-image">
-    <img class="empity-img" src="images/empity.jpg" alt="empity">
-    <img class="speaker-img" src="images/dj.jpeg" alt="Dj image">
+    <img class="speaker-img" src="${featureRoster[i].image}" alt="Dj image">
     </div>
     <div class="disc-container">
     <div class="speaker-disc">
-      <h2>Yochai Benkler</h2>
-      <p>Bekman Professor of Enterprenurial Legal Student at harvard Law School</p>
+      <h2>${featureRoster[i].name}</h2>
+      <p>${featureRoster[i].location}</p>
     </div>
     <hr class="feature-line">
     <div class="discription">
-      <p>Bekman Professor of Enterprenurial Legal bekman professor of Enterprenurial Legal bekman</p>
+      <p>${featureRoster[i].description}</p>
     </div>
     </div>
     </div>
     `;
-    speaker.innerHTML += speakerContainer;
-    window.addEventListener('resize', () => {
-      window.location.replace();
-    });
+    el.innerHTML += speakerContainer;
+    wrapper.appendChild(el);
   }
-} else {
-  speakerContainer = '';
-  for (let i = 0; i < 3; i += 1) {
-    speakerContainer = `
-    <div class="speaker-container">
-    <div class="speaker-image">
-    <img class="empity-img" src="images/empity.jpg" alt="empity">
-    <img class="speaker-img" src="images/dj.jpeg" alt="Dj image">
-    </div>
-    <div class="disc-container">
-    <div class="speaker-disc">
-      <h2>Yochai Benkler</h2>
-      <p>Bekman Professor of Enterprenurial Legal Student at harvard Law School</p>
-    </div>
-    <hr class="feature-line">
-    <div class="discription">
-      <p>Bekman Professor of Enterprenurial Legal bekman professor of Enterprenurial Legal bekman</p>
-    </div>
-    </div>
-    </div>
-    `;
-    speaker.innerHTML += speakerContainer;
-    window.addEventListener('resize', () => {
-      window.location.reload();
-    });
+};
+
+window.addEventListener('resize', () => {
+  const newState = document.body.clientWidth < mobileBreakpoint;
+
+  if (newState !== isMobile) {
+    isMobile = newState;
+
+    renderPage();
   }
-}
-roster.appendChild(speaker);
+});
+
+// eslint-disable-next-line func-names
+document.onreadystatechange = function () {
+  if (document.readyState === 'interactive') {
+    isMobile = document.body.clientWidth < mobileBreakpoint;
+    renderPage();
+  }
+};
+
+// eslint-disable-next-line no-unused-vars
+const toggle = () => {
+  const button = document.querySelector('#toggleButton');
+  show = show === 3 ? 6 : 3;
+  button.innerText = show === 3 ? 'More' : 'Less';
+  renderPage();
+};

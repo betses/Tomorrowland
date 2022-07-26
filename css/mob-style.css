@@ -91,7 +91,7 @@
     color: #ec5242;
     font-style: normal;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 13px;
   }
 
   .landing-text p {
@@ -142,6 +142,12 @@
 
   .card-icon img {
     width: 40px;
+  }
+
+  .main-program-title-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main-program-title-head h2 {
@@ -209,6 +215,11 @@
     margin-bottom: 10px;
     color: #d3d3d3;
   }
+  .featured-head-speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .featured-head-speaker h2 {
     font-style: normal;
@@ -225,9 +236,8 @@
 
   .speaker-img {
     width: 80px;
-    position: relative;
-    left: 10px;
-    top: -42px;
+    left: -46px;
+    top: 5px;
   }
 
   .empity-img {
@@ -237,6 +247,7 @@
   .speaker-container {
     display: flex;
     gap: 10px;
+    padding: 30px 0;
   }
 
   .speaker-disc h2 {
@@ -420,7 +431,16 @@
   }
 
   /* ------------------------ Revise --------------------------- */
-  .past-image {
+  .past-image1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/past1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 368px;
+  }
+  .past-image2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -492,7 +512,14 @@
 
   .footer-wrappter {
     display: flex;
+    gap: 10px;
     padding: 30px 10px;
+  }
+
+  footer {
+    width: 376px;
+    display: flex;
+    margin: auto;
   }
 
   .footer-wrappter p {
@@ -504,6 +531,6 @@
   }
 
   .footer-wrappter img {
-    width: 200px;
+    width: 137px;
   }
 }

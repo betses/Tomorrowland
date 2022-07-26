@@ -3,9 +3,11 @@
     font-family: Lato, sans-serif;
     margin: auto;
   }
-  .mob-nav-container{
+
+  .mob-nav-container {
     display: none;
   }
+
   .mob-nav {
     display: none;
   }
@@ -86,7 +88,7 @@
     padding: 15px;
     margin: 25px 10px 20px 0;
     width: 450px;
-    background-color:#f7f7f7;
+    background-color: #f7f7f7;
   }
 
   .date-place h2 {
@@ -412,6 +414,7 @@
     background-position: center;
     background-size: 360px;
   }
+
   .past-image2 {
     display: flex;
     flex-direction: column;

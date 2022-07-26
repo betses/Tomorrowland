@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
   }
-  nav{
+
+  nav {
     width: 376px;
     display: flex;
     flex-direction: column;
     margin: auto;
   }
+
   .top-nav {
     display: none;
   }
@@ -215,6 +217,7 @@
     margin-bottom: 10px;
     color: #d3d3d3;
   }
+
   .featured-head-speaker {
     display: flex;
     flex-direction: column;
@@ -331,12 +334,14 @@
   .about-featured-head {
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
     padding: 50px 0;
   }
+
   .about-featured-head h2 {
     text-align: center;
   }
+
   .about-title-section {
     display: flex;
     flex-direction: column;
@@ -440,6 +445,7 @@
     background-position: center;
     background-size: 368px;
   }
+
   .past-image2 {
     display: flex;
     flex-direction: column;

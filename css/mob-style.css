@@ -538,10 +538,6 @@
     margin: auto;
   }
 
-  .about-footer-section {
-    background-color: #272a31;
-  }
-
   .footer-wrappter p {
     color: #272a31;
     font-style: normal;
@@ -561,7 +557,7 @@
   }
 
   .about-footer-wrappter p {
-    color: white;
+    color: #272a31;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;

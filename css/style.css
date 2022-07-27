@@ -569,6 +569,10 @@
   .about-footer-section {
     background-color: #272a31;
   }
+
+  .about-partner-section {
+    display: none;
+  }
 }
 
 @media (min-width: 1500px) {

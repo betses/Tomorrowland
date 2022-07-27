@@ -1,19 +1,24 @@
-let isClicked = false;
+const humbergerIcon = document.querySelector('#open-menu');
+const popupWindow = document.querySelector('#menu');
+const closePopup = document.querySelector('#close-menu');
+const isClicked = false;
 
-// eslint-disable-next-line no-unused-vars
-function display() {
-  if (!isClicked) {
-    document.getElementById('menu').style.display = 'block';
-    document.getElementById('open-menu').style.display = 'none';
-    document.getElementById('close-menu').style.display = 'block';
-    isClicked = true;
-  } else {
-    document.getElementById('menu').style.display = 'none';
-    document.getElementById('open-menu').style.display = 'block';
-    document.getElementById('close-menu').style.display = 'none';
-    isClicked = false;
+humbergerIcon.addEventListener('click', () => {
+  if (isClicked === false) {
+    popupWindow.style.display = 'block';
+    humbergerIcon.style.display = 'none';
+    closePopup.style.display = 'block';
   }
-}
+});
+
+closePopup.addEventListener('click', () => {
+  if (isClicked === false) {
+    popupWindow.style.display = 'none';
+    humbergerIcon.style.display = 'block';
+    closePopup.style.display = 'none';
+  }
+});
+
 const featureRoster = [
   {
     id: 0,
@@ -121,10 +126,10 @@ document.onreadystatechange = () => {
   }
 };
 
-// eslint-disable-next-line no-unused-vars
-const toggle = () => {
-  const button = document.querySelector('#toggleButton');
+const toggleButton = document.querySelector('#toggleButton');
+
+toggleButton.addEventListener('click', () => {
   show = show === 3 ? 6 : 3;
-  button.innerText = show === 3 ? 'More' : 'Less';
+  toggleButton.innerText = show === 3 ? 'More' : 'Less';
   renderPage();
-};
+});

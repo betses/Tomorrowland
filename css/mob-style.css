@@ -537,6 +537,10 @@
     display: flex;
     margin: auto;
   }
+  .about-footer-section {
+    background-color: #272a31;
+    
+  }
 
   .footer-wrappter p {
     color: #272a31;
@@ -550,8 +554,27 @@
     width: 137px;
   }
 
+  .about-footer-wrappter {
+    display: flex;
+    gap: 10px;
+    padding: 30px 10px;
+  } 
+
+  .about-footer-wrappter p {
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .about-footer-wrappter img {
+    width: 137px;
+  }
   .about-partner-section {
     width: 376px;
     margin: auto;
   }
+
+  
 }

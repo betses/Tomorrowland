@@ -1,5 +1,5 @@
 # Tomorrowland
-# Globaol association of Craft Coffee Roasters!
+# Globaly associated Event Organizer!
 
 > This website is to advertise the Tommorowland world tour concert 2022. It's a fully responsive completely adaptable site implementing javascript objects, and funtioning javascript modal menu. It includes a home page, and a seperate about page. Please enjoy.     
 
